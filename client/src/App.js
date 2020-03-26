@@ -4,6 +4,8 @@ import SavedList from './Movies/SavedList';
 import MovieList from './Movies/MovieList';
 import Movie from './Movies/Movie';
 import UpdateMovie from './Movies/UpdateMovie';
+import AddMovie from './Movies/AddMovie';
+
 import axios from 'axios';
 
 const App = () => {
@@ -29,6 +31,10 @@ const App = () => {
   return (
     <>
       <SavedList list={savedList} />
+
+      <Route path="/add-movie">
+        <AddMovie setToggle={setToggle} toggle={toggle} />
+      </Route>
 
       <Route path="/update-movie/:id">
         <UpdateMovie
